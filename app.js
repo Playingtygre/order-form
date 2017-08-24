@@ -32,15 +32,27 @@ var usb = new TestItem ('tentacle usb drive', 'img/usb.gif', 'usb');
 var waterCan = new TestItem ('self-watering can', 'img/water-can.jpg', 'waterCan');
 var wineGlass = new TestItem ('wine glass', 'img/wine-glass.jpg', 'wineGlass');
 
+function createDropdown(){
+  var dropdown = document.getElementById('stuff');
+  for (var i = 0; i < itemArray.length; i++) {
+    var newOption = document.createElement('option');
+    newOption.innerText = itemArray[i].name;
+    newOption.value = itemArray[i].filePath;
+    dropdown.appendChild(newOption);
+  }
+};
+createDropdown();
+
 var orderArray = [];
 
 var form = document.getElementById('form');
 form.addEventListener('submit', sendToCart);
 
-function Order(name, addy, phone) {
+function Order(name, addy, phone, imgPath) {
   this.name = name;
   this.addy = addy;
   this.phone = phone;
+  this.imgPath = imgPath;
 };
 
 function sendToCart(event){
@@ -49,6 +61,7 @@ function sendToCart(event){
   newOrder.name = this.elements['firstname'].value + ' ' + this.elements['lastname'].value;
   newOrder.addy = this.elements['street'].value + ' ' + this.elements['city'].value + ', ' + this.elements['state'].value + ' ' + this.elements['zip'].value;
   newOrder.phone = this.elements['phone'].value;
+  newOrder.imgPath = this.elements.dropdown.value;
   form.reset();
   orderArray.push(newOrder);
   localStorage.setItem('orders', JSON.stringify(orderArray));
