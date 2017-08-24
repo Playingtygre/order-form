@@ -14,6 +14,6 @@ function sendToCart(event){
   var newOrder = new Order();
   newOrder.name = this.elements['firstname'].value + ' ' + this.elements['lastname'].value;
   form.reset();
-  nameArray.push(newOrder.name);
-  localStorage.setItem('orders', JSON.stringify(nameArray));
+  orderArray.push(newOrder);
+  localStorage.setItem('orders', JSON.stringify(orderArray));
 };
