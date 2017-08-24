@@ -1,8 +1,10 @@
 'use strict';
 
-var name = JSON.parse(localStorage.getItem('orders'));
+var orderName = JSON.parse(localStorage.getItem('orders'));
 
 var orderSpot = document.getElementById('ordersSection');
-var newP = document.createElement('p');
-newP.innerText = name[0];
-orderSpot.appendChild(newP);
+for (var i = 0; i < orderName.length; i++) {
+  var newP = document.createElement('p');
+  newP.innerText = orderName[i].name;
+  orderSpot.appendChild(newP);
+}
