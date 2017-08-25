@@ -63,8 +63,11 @@ function sendToCart(event){
   newOrder.addy = this.elements['street'].value + ' ' + this.elements['city'].value + ', ' + this.elements['state'].value + ' ' + this.elements['zip'].value;
   newOrder.phone = this.elements['phone'].value;
   newOrder.imgPath = this.elements.dropdown.value;
-  form.reset();
   newOrder.qty = this.elements['qty'].value;
+  if (localStorage.getItem('orders')) {
+    orderArray = JSON.parse(localStorage.getItem('orders'));
+  }
   orderArray.push(newOrder);
   localStorage.setItem('orders', JSON.stringify(orderArray));
+  form.reset();
 };
