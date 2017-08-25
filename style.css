@@ -4,8 +4,10 @@ body {
 
 div {
   background-color: lightblue;
-  margin: 10em;
-  padding: 10%;
+  margin: auto;
+  margin-top: 10em;
+  padding: 5%;
+  width: 80%;
 }
 
 header {
