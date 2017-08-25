@@ -65,6 +65,9 @@ function sendToCart(event){
   newOrder.imgPath = this.elements.dropdown.value;
   form.reset();
   newOrder.qty = this.elements['qty'].value;
+  if (localStorage.getItem('orders')) {
+    orderArray = JSON.parse(localStorage.getItem('orders'));
+  }
   orderArray.push(newOrder);
   localStorage.setItem('orders', JSON.stringify(orderArray));
 };
