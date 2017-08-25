@@ -12,7 +12,7 @@ for (var i = 0; i < orderArray.length; i++) {
   newP.innerHTML = orderArray[i].name + ', ' + orderArray[i].addy + ', ' + orderArray[i].phone;
   orderSpot.appendChild(newP);
   var button = document.createElement('button');
-  button.innerHTML = '<img src="img/delete.png" id="button">';
+  button.innerHTML = '<img src="img/delete.png" id="button">Delete this item';
   orderSpot.appendChild(button);
   var clear = createElement('div');
   clear.className = 'clearFix';
