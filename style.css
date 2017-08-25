@@ -1,4 +1,14 @@
 body {
+  background-image:url(https://previews.123rf.com/images/ivani4/ivani41302/ivani4130200002/18085480-Illustration-of-a-bus-Stock-Vector-bus-cartoon-coach.jpg);
+}
+
+div {
+  background-color: lightblue;
+  margin: 10em;
+  padding: 10%;
+}
+
+header {
   background-color: lightblue;
 }
 
@@ -23,4 +33,9 @@ table, th, td {
 
 #form {
   border-collapse: collapse;
+}
+
+#h{
+  font-size: 30px;
+  font-family: fantasy;
 }
