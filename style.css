@@ -4,4 +4,21 @@ body {
 
 table, th, td {
    border: 1px solid black;
+
+#button {
+  width: 20px;
+}
+
+.itemPic {
+  width: 30%;
+  float: left;
+  margin-right: 50px;
+}
+
+.clearFix {
+  clear: both;
+}
+
+#form {
+  border-collapse: collapse;
 }
