@@ -8,6 +8,7 @@ div {
   margin-top: 10em;
   padding: 5%;
   width: 80%;
+  border: 1px, black;
 }
 
 header {
