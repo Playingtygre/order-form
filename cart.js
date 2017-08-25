@@ -2,8 +2,10 @@
 
 var orderArray = JSON.parse(localStorage.getItem('orders'));
 
-var orderSpot = document.getElementById('ordersSection');
+var orderSection = document.getElementById('ordersSection');
 for (var i = 0; i < orderArray.length; i++) {
+  var orderSpot = document.createElement('div');
+  orderSpot.setAttribute('orderIndex', i);
   var pic = document.createElement('img');
   pic.src = orderArray[i].imgPath;
   pic.className = 'itemPic';
@@ -18,3 +20,10 @@ for (var i = 0; i < orderArray.length; i++) {
   clear.className = 'clearFix';
   orderSpot.appendChild(clear);
 }
+var delButton = document.getElementById('button');
+delButton.addEventListener('click', delOrder);
+
+function delOrder(event) {
+  var orderIndex = parseInt(event.target.getAttribute('orderIndex'));
+  var clickedOrder = orderArray[orderIndex];
+};
