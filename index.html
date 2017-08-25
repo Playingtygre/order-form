@@ -4,64 +4,59 @@
     <meta charset="utf-8">
 
 <link rel="stylesheet" type="text/css" href="style.css">
-
-
-    <title> </title>
-Orders are here
-
-<!-- input instructions for how to fill out form,  -->
-  </head>
+<title> Order from the Bus Mall </title>
+<header id = 'h'> Orders Stuff Here </header>
   <body>
-<header>
-stuff
-</header>
+<!-- input instructions for how to fill out form,  -->
+<div class = "backdrop">
 
+<h1> Please fill out Order Form Completely </h1>
   <form id = "form">
   <table>
   <tr>
   <td><label for="firstname">First name:</label></td>
-  <td><input type="text" name="firstname"></td>
+  <td><input type="text" name="firstname" placeholder="Write first name"></td>
 </tr> <tr>
   <td><label for="lastname">Last name:</label></td>
-  <td><input type="text" name="lastname"> </td>
+  <td><input type="text" name="lastname" placeholder="Write your last here"> </td>
 </tr> <tr>
   <td><label for = "street">Address</label></td>
-  <td><input type="text" name="street"></td>
+  <td><input type="text" name="street" placeholder="Write your address here"></td>
 </tr><tr>
   <td><label for = "city">City</label></td>
-  <td><input type="text" name="city"></td>
+  <td><input type="text" name="city" placeholder="Write your city"></td>
 </tr><tr>
   <td><label for = "state">State</label></td>
-  <td><input type="text" name="state"></td>
+  <td><input type="text" name="state" placeholder="Write your state here"></td>
 </tr><tr>
   <td><label for = "zip">Zipcode</label></td>
-  <td><input type="number" name="zip" step = "1"></td>
+  <td><input type="number" name="zip" step = "1" placeholder="Input your zip code here"></td>
 </tr><tr>
   <td><label for = "phone">Phone</label></td>
-  <td><input type="tel" name="phone" step = "1" > <td>
+  <td><input type="tel" name="phone" step = "1"  placeholder= "Input your phone"> <td>
 </tr>
 
 
 <table id = "orderStuff">
 <tr>
 <td><label for = "dropdown">Select Your Product</label></td>
-<td><select name= "dropdown" id = "stuff"> </select></tr></td>
+<td><select name= "dropdown" placeholder= "Please Select a Item" id = "stuff"> </select></tr></td>
 
 <tr> <td><label for = "qty">QTY</label>
-<input type="number" min = "0" name="qty" step = "1"> </tr></td>
+<input type="number" min = "0" name="qty" step = "1" placeholder="Quantity"> </tr></td>
 </table>
 
 <h2> Credit card Info </h2>
 
 <table>
 <tr><td><label for = "creditCard"> Credit Card Number </label>
-<input type= "number"  maxlength="16"></tr></td>
+<input type= "number"  maxlength="16"  placeholder= "Input Credit Card number "></tr></td>
 
 <tr><td><label for = "nameCard">Name on Card</label>
-<input type="text"></tr></td>
+<input type="text" placeholder= "Name on the Card"></tr></td>
 
 <tr><td><label for = "exp">Expiration Date </label>
-<input type="date"></tr></td>
+<input type="date"  placeholder= "Date of Expiration on Card"></tr></td>
 
 </table></table>
 
@@ -76,7 +71,7 @@ stuff
 <a href="cart.html">Cart Page</a>
 
 
-
+</div>
 <footer> </footer>
   </body>
   <script src ="app.js"></script>
