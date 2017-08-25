@@ -48,11 +48,12 @@ var orderArray = [];
 var form = document.getElementById('form');
 form.addEventListener('submit', sendToCart);
 
-function Order(name, addy, phone, imgPath) {
+function Order(name, addy, phone, imgPath, qty) {
   this.name = name;
   this.addy = addy;
   this.phone = phone;
   this.imgPath = imgPath;
+  this.qty = qty;
 };
 
 function sendToCart(event){
@@ -63,6 +64,7 @@ function sendToCart(event){
   newOrder.phone = this.elements['phone'].value;
   newOrder.imgPath = this.elements.dropdown.value;
   form.reset();
+  newOrder.qty = this.elements['qty'].value;
   orderArray.push(newOrder);
   localStorage.setItem('orders', JSON.stringify(orderArray));
 };
