@@ -14,7 +14,7 @@ for (var i = 0; i < orderArray.length; i++) {
   var button = document.createElement('button');
   button.innerHTML = '<img src="img/delete.png" id="button">Delete this item';
   orderSpot.appendChild(button);
-  var clear = createElement('div');
+  var clear = document.createElement('div');
   clear.className = 'clearFix';
   orderSpot.appendChild(clear);
 }
